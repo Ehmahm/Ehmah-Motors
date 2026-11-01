@@ -14,7 +14,12 @@
     box-sizing: border-box;
 }
 
+html { -webkit-text-size-adjust: 100%; }
+
+img { max-width: 100%; height: auto; display: block; }
+
 body {
+    overflow-x: hidden;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--background);
     color: var(--text);
@@ -22,14 +27,16 @@ body {
 }
 
 .hero {
-    height: 80vh;
+    min-height: 80vh;
+    min-height: 80svh;
+    padding: 6rem 1rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80&w=1920') center/cover;
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=900&q=60') center/cover;
 }
 
 .hero h1 {
@@ -61,7 +68,7 @@ body {
 
 .page-header {
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 6rem 1rem 3rem;
     background: linear-gradient(to right, var(--surface), var(--surface-hover));
 }
 
@@ -73,13 +80,57 @@ body {
     color: transparent;
 }
 
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: var(--text-secondary);
+}
+
+.brands {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 2rem;
+}
+
+.brand-card {
+    background-color: var(--surface);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.brand-card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.brand-content {
+    padding: 1.5rem;
+}
+
+.brand-content h2 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+}
+
+.brand-content p {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
 main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
 }
 
+@media (min-width: 769px) {
+    .hero { background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=70&w=1920'); }
+}
+
 @media (max-width: 768px) {
+    main { padding: 1rem; }
+
     .hero h1 {
         font-size: 2.5rem;
     }

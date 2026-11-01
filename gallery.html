@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ehmah Motors - Tesla, Toyota and Mercedes models, history and gallery.">
+    <meta name="theme-color" content="#000000">
     <title>Gallery - Ehmah Motors</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -13,11 +15,11 @@
 <body>
     <nav class="navbar">
         <div class="nav-brand">EHMAH MOTORS</div>
-        <div class="nav-toggle">
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="history.html">History</a></li>
@@ -38,7 +40,7 @@
 
         <section class="gallery tesla-gallery">
             <div class="car-card">
-                <img src="images/cybertr.avif" alt="Tesla cybertruck">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/cybertr.avif" alt="Tesla cybertruck">
                 <div class="car-details">
                     <h3>Cyber Truck</h3>
                     <p>Year: 2024</p>
@@ -47,7 +49,7 @@
                 </div>
             </div>
             <div class="car-card">
-                <img src="images/s.jpg" alt="Tesla Model S">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/s.jpg" alt="Tesla Model S">
                 <div class="car-details">
                     <h3>Model S</h3>
                     <p>Year: 2023</p>
@@ -56,7 +58,7 @@
                 </div>
             </div>
             <div class="car-card">
-                <img src="images/y.avif" alt="Tesla Model Y">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/y.avif" alt="Tesla Model Y">
                 <div class="car-details">
                     <h3>Model Y</h3>
                     <p>Year: 2024</p>
@@ -68,7 +70,7 @@
 
         <section class="gallery toyota-gallery hidden">
             <div class="car-card">
-                <img src="images/ft.jpg" alt="Toyota Fortuner">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/ft.jpg" alt="Toyota Fortuner">
                 <div class="car-details">
                     <h3>Fortuner</h3>
                     <p>Year: 2005</p>
@@ -78,7 +80,7 @@
             </div>
 
             <div class="car-card">
-                <img src="images/supra.avif" alt="Toyota Supra">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/supra.avif" alt="Toyota Supra">
                 <div class="car-details">
                     <h3>Supra</h3>
                     <p>Year: 2023</p>
@@ -88,7 +90,7 @@
             </div>
 
             <div class="car-card">
-                <img src="images/hilu.jpg" alt="Toyota Hilux">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/hilu.jpg" alt="Toyota Hilux">
                 <div class="car-details">
                     <h3>Hilux</h3>
                     <p>Year: 2023</p>
@@ -101,7 +103,7 @@
 
         <section class="gallery mercedes-gallery hidden">
             <div class="car-card">
-                <img src="images/daniil-lyusov-am01bO64b8s-unsplash.jpg" alt="Mercedes AMG GT">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/amg-gt.webp" alt="Mercedes AMG GT">
                 <div class="car-details">
                     <h3>AMG GT</h3>
                     <p>Year: 2023</p>
@@ -111,7 +113,7 @@
             </div>
 
             <div class="car-card">
-                <img src="images/gwagn.avif" alt="Mercedes G-550">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/gwagn.avif" alt="Mercedes G-550">
                 <div class="car-details">
                     <h3>G-550</h3>
                     <p>Year: 2023</p>
@@ -121,7 +123,7 @@
             </div>
 
             <div class="car-card">
-                <img src="images/photo-1629019879059-2a0345f93aea.avif" alt="Mercedes S Class">
+                <img loading="lazy" decoding="async" width="600" height="400" src="images/photo-1629019879059-2a0345f93aea.avif" alt="Mercedes S Class">
                 <div class="car-details">
                     <h3>S- Class</h3>
                     <p>Year: 2023</p>
@@ -136,7 +138,8 @@
         <p>&copy; 2024 Ehmah Motors. All rights reserved.</p>
     </footer>
 
-    <script src="js/gallery.js"></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/gallery.js" defer></script>
 </body>
 
 </html>
